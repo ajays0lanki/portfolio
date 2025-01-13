@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-$3wix$s!(l#9cms^&6(@o9wbm(x+)1lf69ri8ax7sp6cx5g-ij
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://portfolio-1iqn.vercel.app/']
 
 
 
