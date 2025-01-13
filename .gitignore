@@ -1,1 +1,5 @@
 penv/
+*.pyc
+__pycache__/
+*.pyo
+.venv/
