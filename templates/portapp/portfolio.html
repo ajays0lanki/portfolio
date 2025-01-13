@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/png">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header_area">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <a class="navbar-brand logo_h" href="index.html"><img src="{% static 'img/logo.png' %}" alt=""></a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav justify-content-end">
+                            <li class="nav-item"><a class="nav-link" href="{% url 'home-page' %}">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'about-page' %}">About</a></li>
+							<li class="nav-item"><a class="nav-link" href="{% url "service-page" %}">Services</a></li>
+
+                            <li class="nav-item active"><a class="nav-link" href="{% url 'portfolio-page' %}">Portfolio</a></li>
+							<li class="nav-item"><a class="nav-link" href="{% url "portfolio-details-page" %}">Projects</a></li>
+
+                            <li class="nav-item"><a class="nav-link" href="{% url 'contact-page' %}">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="container">
+                <div class="banner_content text-center">
+                    <h2>Portfolio</h2>
+                    <div class="page_link">
+                        <a href="{% url 'home-page' %}">Home</a>
+                        <a href="{% url 'portfolio-page' %}">Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about_area section_gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img class="img-fluid" src="{% static 'img/about-us.png' %}" alt="About Me">
+                </div>
+                <div class="col-lg-6 about_content">
+                    <h2>About Me</h2>
+                    <p>I am a passionate web developer with experience in Django and other web technologies.</p>
+                    <h4>Education</h4>
+                    <ul>
+                        <li>Gujrat State University - B.B.A, 2021</li>
+                        <li>Sliver Oak University - M.C.A, (2023-2025)Present</li>
+                    </ul>
+                    <h4>Skills</h4>
+                    <ul>
+                        <li>Django</li>
+                        <li>JavaScript</li>
+                        <li>MySQL</li>
+                    </ul>
+                    <h4>Interests</h4>
+                    <p>Learning Music, Games</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="portfolio_area">
+        <div class="container">
+            <div class="main_title text-center">
+                <h2>My Certificates</h2>
+                <p>Here are some of the certifications I have achieved to enhance my skills and expertise in web development and related technologies.</p>
+            </div>
+    
+            <div class="row">
+                <!-- Certificate 1: Python Crash Course -->
+                <div class="col-lg-6 col-md-6" data-aos="fade-up">
+                    <div class="portfolio_box">
+                        <img class="img-fluid" src="{% static 'img/cert_python.jpg' %}" alt="Python Crash Course Certificate">
+                        <div class="short_info">
+                            <h4>Python Crash Course</h4>
+                            <p>Certification from Google covering the basics of Python programming, including hands-on projects.</p>
+                            <a href="{% static 'certificates/python_crash_course.pdf' %}" target="_blank" class="btn btn-primary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Certificate 2: 100 Days of Code -->
+                <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio_box">
+                        <img class="img-fluid" src="{% static 'img/cert_100_days.jpg' %}" alt="100 Days of Code Certificate">
+                        <div class="short_info">
+                            <h4>100 Days of Code</h4>
+                            <p>A comprehensive Python bootcamp on Udemy, focusing on advanced topics like data visualization and web scraping.</p>
+                            <a href="{% static 'certificates/100_days_of_code.pdf' %}" target="_blank" class="btn btn-primary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Certificate 3: Frontend Basics -->
+                <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio_box">
+                        <img class="img-fluid" src="{% static 'img/cert_frontend.jpg' %}" alt="Frontend Basics Certificate">
+                        <div class="short_info">
+                            <h4>Frontend Basics</h4>
+                            <p>Certification by Meta, covering HTML, CSS, and JavaScript basics to build responsive web pages.</p>
+                            <a href="{% static 'certificates/frontend_basics.pdf' %}" target="_blank" class="btn btn-primary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Certificate 4: Advanced Web Development -->
+                <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio_box">
+                        <img class="img-fluid" src="{% static 'img/cert_web_dev.jpg' %}" alt="Advanced Web Development Certificate">
+                        <div class="short_info">
+                            <h4>Advanced Web Development</h4>
+                            <p>Certification by Coursera focusing on advanced concepts in web development and deployment strategies.</p>
+                            <a href="{% static 'certificates/advanced_web_dev.pdf' %}" target="_blank" class="btn btn-primary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    <!-- Portfolio Section -->
+    <section class="portfolio_area">
+        <div class="container">
+            <div class="main_title text-center">
+                <h2>My Projects</h2>
+                <p>Here are some of the projects I've worked on recently. Click "Run Project" to explore them further.</p>
+            </div>
+
+            <div class="row">
+                <!-- Project 1: To-Do List Application -->
+                <div class="col-lg-6 col-md-6" data-aos="fade-up">
+                    <div class="portfolio_box">
+                        <img class="img-fluid" src="{% static 'img/project1.jpg' %}" alt="To-Do List Project">
+                        <div class="short_info">
+                            <h4>To-Do List Application</h4>
+                            <p>A Django-based application for managing daily tasks with full CRUD functionality.</p>
+                            <a href="{% url "todosapp:login-page" %}" class="btn btn-primary">Run Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: E-commerce Website -->
+                <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio_box">
+                        <img class="img-fluid" src="{% static 'img/project2.jpg' %}" alt="E-commerce Website">
+                        <div class="short_info">
+                            <h4>E-commerce Website</h4>
+                            <p>A Django e-commerce platform with user authentication, product listings, and payment integration.</p>
+                            <a href="#" class="btn btn-primary">Run Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Social Media App -->
+                <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio_box">
+                        <img class="img-fluid" src="{% static 'img/project3.jpg' %}" alt="Social Media App">
+                        <div class="short_info">
+                            <h4>Social Media App</h4>
+                            <p>A full-fledged social media platform featuring user profiles, posts, comments, likes, and friend requests.</p>
+                            <a href="#" class="btn btn-primary">Run Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Basic CRM Management Webpage -->
+                <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio_box">
+                        <img class="img-fluid" src="{% static 'img/project4.jpg' %}" alt="CRM Management">
+                        <div class="short_info">
+                            <h4>Basic CRM Management Webpage</h4>
+                            <p>A simple web-based customer relationship management solution for tracking and managing customer interactions.</p>
+                            <a href="#" class="btn btn-primary">Run Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer_area">
+        <div class="container">
+            <div class="footer_bottom d-flex justify-content-center align-items-center">
+                <p class="col-lg-12 footer-text text-center">
+                    © 2025 Portfolio. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>
