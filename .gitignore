@@ -3,3 +3,4 @@ penv/
 __pycache__/
 *.pyo
 .venv/
+vercel.json/

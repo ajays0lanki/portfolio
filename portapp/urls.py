@@ -1,6 +1,7 @@
 # portfolio/urls.py
 from django.urls import path
 from . import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('', views.home , name= "home-page"),
@@ -10,3 +11,4 @@ urlpatterns = [
     path('portfolio/', views.portfolio , name= "portfolio-page"),
     path('portfolio-details/', views.portfolio_details, name='portfolio-details-page'),
 ]
+urlpatterns += staticfiles_urlpatterns()
